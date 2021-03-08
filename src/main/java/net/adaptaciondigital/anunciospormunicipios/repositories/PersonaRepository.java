@@ -11,11 +11,12 @@ import net.adaptaciondigital.anunciospormunicipios.entities.Persona;
 
 public interface PersonaRepository extends Repository<Persona, Integer> {
 	
-	//@Query("SELECT ")
+	@Query("select p from Persona p where p.id = :id")
 	@Transactional(readOnly = true)
 	Persona findById(@Param("id") Integer id);
 	
-	
 	@Transactional(readOnly = true)
 	Collection<Persona> findAll();	
+	
+	
 }

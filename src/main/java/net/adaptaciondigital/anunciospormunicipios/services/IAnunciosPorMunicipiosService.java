@@ -4,7 +4,6 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-@Service
 public interface IAnunciosPorMunicipiosService<T, Id> {
 	
 	T findOne(Id id);
@@ -13,7 +12,7 @@ public interface IAnunciosPorMunicipiosService<T, Id> {
 	
 	void create(T entity);
 	
-	T update(T entity);
+	void update(T entity);
 	
 	void delete(T entity);
 	

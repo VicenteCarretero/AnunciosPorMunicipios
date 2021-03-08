@@ -16,7 +16,7 @@ public class PersonaService implements IAnunciosPorMunicipiosService<Persona, In
 
 	@Override
 	public Persona findOne(Integer id) {
-		return (Persona) personaRepository.findById(id);
+		return personaRepository.findById(id);
 	}
 
 	@Override
@@ -31,9 +31,8 @@ public class PersonaService implements IAnunciosPorMunicipiosService<Persona, In
 	}
 
 	@Override
-	public Persona update(Persona persona) {
+	public void update(Persona persona) {
 		// TODO Auto-generated method stub
-		return null;
 	}
 
 	@Override

@@ -7,9 +7,10 @@ import org.springframework.data.repository.Repository;
 import org.springframework.data.repository.query.Param;
 import org.springframework.transaction.annotation.Transactional;
 
+import net.adaptaciondigital.anunciospormunicipios.entities.Anuncio;
 import net.adaptaciondigital.anunciospormunicipios.entities.Municipio;
 
-public interface MunicipioRepository extends Repository<Municipio, Integer>{
+public interface MunicipioRepository extends Repository<Municipio, Integer> {
 	
 	//@Query("SELECT ")
 	@Transactional(readOnly = true)

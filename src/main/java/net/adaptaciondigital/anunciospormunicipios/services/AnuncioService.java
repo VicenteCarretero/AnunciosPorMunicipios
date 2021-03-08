@@ -2,6 +2,8 @@ package net.adaptaciondigital.anunciospormunicipios.services;
 
 import java.util.List;
 
+import javax.persistence.Entity;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,7 +18,7 @@ public class AnuncioService implements IAnunciosPorMunicipiosService<Anuncio, In
 
 	@Override
 	public Anuncio findOne(Integer id) {
-		Anuncio anuncio = anuncioRepository.findById(id);
+		Anuncio anuncio = anuncioRepository.findOne(id);
 		return anuncio;
 	}
 
@@ -33,9 +35,8 @@ public class AnuncioService implements IAnunciosPorMunicipiosService<Anuncio, In
 	}
 
 	@Override
-	public Anuncio update(Anuncio entity) {
-		// TODO Auto-generated method stub
-		return null;
+	public void update(Anuncio entity) {
+		anuncioRepository.updateAnuncio(entity.getId(), entity.getAnuncio());	
 	}
 
 	@Override
@@ -50,4 +51,9 @@ public class AnuncioService implements IAnunciosPorMunicipiosService<Anuncio, In
 		
 	}
 
+	
+	public void insertAnuncio(Anuncio entity) {
+		anuncioRepository.save(entity);
+	}
+	
 }

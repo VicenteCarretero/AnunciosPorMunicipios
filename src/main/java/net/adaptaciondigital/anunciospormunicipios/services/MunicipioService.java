@@ -31,9 +31,8 @@ public class MunicipioService implements IAnunciosPorMunicipiosService<Municipio
 	}
 
 	@Override
-	public Municipio update(Municipio entity) {
+	public void update(Municipio entity) {
 		// TODO Auto-generated method stub
-		return null;
 	}
 
 	@Override
